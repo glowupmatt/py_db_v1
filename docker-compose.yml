@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    command: flask run --host=0.0.0.0
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_APP: app
+      FLASK_ENV: development
+      SECRET_KEY: GFSDGIRNGIFGNFDS
+    volumes:
+      - .:/usr/local/bin/src/webapp
